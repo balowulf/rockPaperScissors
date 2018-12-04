@@ -6,66 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Rock/Paper/Scissors</title>
 </head>
-<body>    
-    <script>
-        function game() {
-            function getRandomInt(max) {
-                    return Math.floor(Math.random() * Math.floor(max));
-            }
-                
-            const weapons = ['rock', 'paper', 'scissors'];
-            const score   = [0, 0];
-            
-            function playRound(playerSelection, compSelection) {                
-                
-                playerSelection = prompt('Choose your weapon!').toLowerCase();
-                compSelection   = weapons[getRandomInt(3)];
-
-                switch (playerSelection) {
-                    case 'rock':
-                        if (compSelection === 'paper') {
-                            console.log(`You lose!  ${compSelection} beats ${playerSelection}`);
-                            score[1]++;
-                        } else if (compSelection === 'scissors') {
-                            console.log(`You win! ${playerSelection} beats ${compSelection}`);
-                            score[0]++;
-                        } else {
-                            console.log('Tie!');
-                        }
-                        break;
-                    case 'paper':
-                        if (compSelection === 'scissors') {
-                            console.log(`You lose! ${compSelection} beats ${playerSelection}`);
-                            score[1]++;
-                        } else if (compSelection === 'rock') {
-                            console.log(`You win! ${playerSelection} beats ${compSelection}`);
-                            score[0]++;
-                        } else {
-                            console.log('Tie!');
-                        }
-                        break;
-                    case 'scissors':
-                        if (compSelection === 'rock') {
-                            console.log(`You lose! ${compSelection} beats ${playerSelection}` );
-                            score[1]++;
-                        } else if (compSelection === 'paper') {
-                            console.log(`You win! ${playerSelection} beats ${compSelection}`);
-                            score[0]++;
-                        } else {
-                            console.log('Tie!');
-                        }
-                        break;
-                }
-            }
-            
-            playRound();
-            while (score[0] <=1 && score[1] <= 1) {
-                playRound();
-            }
-            console.log(score);
-        }
-        
-        game();
-    </script>
+<body>
+        <header>Rock | Paper | Scissors</header>
+        <button class="btn" id="rock">Rock</button>
+        <button class="btn" id="paper">Paper</button>
+        <button class="btn" id="scissors">Scissors</button>
+        <div class="player-score">Player Score</div>
+        <div class="comp-score">Computer Score</div>
+        <div class="winner">Winner!</div>
+    <script src="js/game.js"></script>
 </body>
 </html>
