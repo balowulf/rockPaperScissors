@@ -4,6 +4,8 @@ const scissors    = document.querySelector('#scissors');
 const playerScore = document.querySelector('.player-score');
 const compScore   = document.querySelector('.comp-score');
 const score       = [0, 0];
+let round         = 1;
+const roundCount  = document.querySelector('.round');
 const weapons     = ['rock', 'paper', 'scissors'];
 const compChoice  = () => {
     let choice = weapons[Math.floor(Math.random() * weapons.length)];
@@ -69,6 +71,8 @@ function playRound(playerChoice, compChoice) {
             }
             break;
     }
+    round++;
+    roundCount.textContent = `${round}`;
 }
 
 // function game() {
