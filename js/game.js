@@ -1,12 +1,13 @@
 const rock        = document.querySelector('#rock');
 const paper       = document.querySelector('#paper');
 const scissors    = document.querySelector('#scissors');
-const playerScore = document.querySelector('.player-score');
-const compScore   = document.querySelector('.comp-score');
+const playerScore = document.querySelector('#player-score');
+const compScore   = document.querySelector('#comp-score');
 const score       = [0, 0];
 let round         = 1;
-const roundCount  = document.querySelector('.round');
+const roundCount  = document.querySelector('#round');
 const weapons     = ['rock', 'paper', 'scissors'];
+const message     = document.querySelector('.message');
 const compChoice  = () => {
     let choice = weapons[Math.floor(Math.random() * weapons.length)];
     return choice;
@@ -20,52 +21,52 @@ function playRound(playerChoice, compChoice) {
     switch (playerChoice) {
         case 'rock':
             if (compChoice === 'paper') {
-                console.log(`You lose!  ${compChoice} beats ${playerChoice}`);
+                message.textContent = `You lose! ${compChoice} beats ${playerChoice}`;
                 score[1]++;
                 //apply textContent that contains score;
                 playerScore.textContent = `${score[1]}`;
                 compScore.textContent = `${score[0]}`;
             } else if (compChoice === 'scissors') {
-                console.log(`You win! ${playerChoice} beats ${compChoice}`);
+                message.textContent = `You win! ${playerChoice} beats ${compChoice}`;
                 score[0]++;
                 playerScore.textContent = `${score[1]}`;
                 compScore.textContent = `${score[0]}`;
             } else {
-                console.log('Tie!');
+                message.textContent = 'Tie!';
                 playerScore.textContent = `${score[1]}`;
                 compScore.textContent = `${score[0]}`;
             }
             break;
         case 'paper':
             if (compChoice === 'scissors') {
-                console.log(`You lose! ${compChoice} beats ${playerChoice}`);
+                message.textContent = `You lose! ${compChoice} beats ${playerChoice}`;
                 score[1]++;
                 playerScore.textContent = `${score[1]}`;
                 compScore.textContent = `${score[0]}`;
             } else if (compChoice === 'rock') {
-                console.log(`You win! ${playerChoice} beats ${compChoice}`);
+                message.textContent = `You win! ${playerChoice} beats ${compChoice}`;
                 score[0]++;
                 playerScore.textContent = `${score[1]}`;
                 compScore.textContent = `${score[0]}`;
             } else {
-                console.log('Tie!');
+                message.textContent = 'Tie!';
                 playerScore.textContent = `${score[1]}`;
                 compScore.textContent = `${score[0]}`;
             }
             break;
         case 'scissors':
             if (compChoice === 'rock') {
-                console.log(`You lose! ${compChoice} beats ${playerChoice}` );
+                message.textContent = `You lose! ${compChoice} beats ${playerChoice}` ;
                 score[1]++;
                 playerScore.textContent = `${score[1]}`;
                 compScore.textContent = `${score[0]}`;
             } else if (compChoice === 'paper') {
-                console.log(`You win! ${playerChoice} beats ${compChoice}`);
+                message.textContent = `You win! ${playerChoice} beats ${compChoice}`;
                 score[0]++;
                 playerScore.textContent = `${score[1]}`;
                 compScore.textContent = `${score[0]}`;
             } else {
-                console.log('Tie!');
+                message.textContent = 'Tie!';
                 playerScore.textContent = `${score[1]}`;
                 compScore.textContent = `${score[0]}`;
             }
