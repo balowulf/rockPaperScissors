@@ -22,13 +22,12 @@ function playRound(playerChoice, compChoice) {
         case 'rock':
             if (compChoice === 'paper') {
                 message.textContent = `You lose! ${compChoice} beats ${playerChoice}`;
-                score[1]++;
-                //apply textContent that contains score;
+                score[0]++;
                 playerScore.textContent = `${score[1]}`;
                 compScore.textContent = `${score[0]}`;
             } else if (compChoice === 'scissors') {
                 message.textContent = `You win! ${playerChoice} beats ${compChoice}`;
-                score[0]++;
+                score[1]++;
                 playerScore.textContent = `${score[1]}`;
                 compScore.textContent = `${score[0]}`;
             } else {
@@ -40,12 +39,12 @@ function playRound(playerChoice, compChoice) {
         case 'paper':
             if (compChoice === 'scissors') {
                 message.textContent = `You lose! ${compChoice} beats ${playerChoice}`;
-                score[1]++;
+                score[0]++;
                 playerScore.textContent = `${score[1]}`;
                 compScore.textContent = `${score[0]}`;
             } else if (compChoice === 'rock') {
                 message.textContent = `You win! ${playerChoice} beats ${compChoice}`;
-                score[0]++;
+                score[1]++;
                 playerScore.textContent = `${score[1]}`;
                 compScore.textContent = `${score[0]}`;
             } else {
@@ -57,12 +56,12 @@ function playRound(playerChoice, compChoice) {
         case 'scissors':
             if (compChoice === 'rock') {
                 message.textContent = `You lose! ${compChoice} beats ${playerChoice}` ;
-                score[1]++;
+                score[0]++;
                 playerScore.textContent = `${score[1]}`;
                 compScore.textContent = `${score[0]}`;
             } else if (compChoice === 'paper') {
                 message.textContent = `You win! ${playerChoice} beats ${compChoice}`;
-                score[0]++;
+                score[1]++;
                 playerScore.textContent = `${score[1]}`;
                 compScore.textContent = `${score[0]}`;
             } else {
