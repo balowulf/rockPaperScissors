@@ -1,30 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Rock/Paper/Scissors</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Rock/Paper/Scissors</title>
 </head>
 <body>
-        <div class="header">
-            <div class="player-score">Player Score: <span id="player-score">0</span></div>
-            <div class="round">Round: <span id="round">1</span></div>
-            <div class="comp-score">Computer Score: <span id="comp-score">0</span> </div>
-        </div>
-        <div class="message">Choose Your Weapon!</div>
-        <div class="weapons">
-            <input class="btn" id="rock" type="image" src="img/rock.png" alt="">
-            <input class="btn" id="paper" type="image" src="img/paper.png" alt="">
-            <input class="btn" id="scissors" type="image" src="img/scissors.png" alt="">
-        </div>
-        <div class="winner">Winner!</div>
-        <footer>
-            <div class="rock-text">Rock</div>
-            <div class="paper-text">Paper</div>
-            <div class="scissors-text">Scissors</div>
-        </footer>
-    <script src="js/game.js"></script>
+  <div class="title">Rock | Paper | Scissors</div>
+  <div class="header">
+    <div class="player-score">Player Score: <span id="player-score">0</span></div>
+    <div class="round">Round: <span id="round">1</span></div>
+    <div class="comp-score">Computer Score: <span id="comp-score">0</span> </div>
+  </div>
+  <div class="message">5 Rounds -- Choose Your Weapon!</div>
+  <div class="weapons">
+    <input class="btn" id="rock" type="image" src="img/rock.png" alt="">
+    <input class="btn" id="paper" type="image" src="img/paper.png" alt="">
+    <input class="btn" id="scissors" type="image" src="img/scissors.png" alt="">
+  </div>
+  <div class="endgame">
+    <button>New Game</button>
+  </div>
+<script src="js/game.js"></script>
 </body>
 </html>
