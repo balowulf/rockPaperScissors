@@ -4,8 +4,6 @@
 
 ### [Check It Out!](https://balowulf.github.io/rockPaperScissors/)
 
-![](tasklist.gif)
-
 ### ToDo:
 - [ ] Display due date and priorty in task list
 - [ ] Add editing feature for due date and priority
