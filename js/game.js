@@ -19,14 +19,14 @@ endGameBtn.style.display = 'none';
 
 /********** Event Listeners **********/
 
-rock.addEventListener('click', () => {playRound('rock', compChoice());});
-paper.addEventListener('click', () => {playRound('paper', compChoice());});
-scissors.addEventListener('click', () => {playRound('scissors', compChoice());});
+rock.addEventListener('click', () => playRound('rock', compChoice()));
+paper.addEventListener('click', () => playRound('paper', compChoice()));
+scissors.addEventListener('click', () => playRound('scissors', compChoice()));
 endGameBtn.addEventListener('click', clearAll);
 
 /********** Functions **********/
 
-function playRound(playerChoice, compChoice) {                
+function playRound(playerChoice, compChoice) {
   switch (playerChoice) {
     case 'rock':
       if (compChoice === 'paper') {

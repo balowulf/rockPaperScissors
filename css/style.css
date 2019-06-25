@@ -90,4 +90,5 @@ button:hover {
   background: lightslategray;
   border    : 1px solid papayawhip;
   color     : papayawhip;
+  cursor    : pointer;
 }
